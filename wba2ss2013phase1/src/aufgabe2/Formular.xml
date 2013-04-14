@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formular>
+    <gruppe id="123">
+     	<gruppenleiter>
+          	<vorname>Max</vorname>
+          	<nachname>Mustermann</nachname>
+          	<email>max.mustermann@aol.com</email>
+          	<alter>31.12.1999</alter>
+          	<erfahrung>f</erfahrung>
+          	<schlagzeug>true</schlagzeug>
+          	<anmerkung>Text</anmerkung>
+      	</gruppenleiter>
+      	<person>
+          	<vorname>Max</vorname>
+          	<nachname>Mustermann</nachname>
+          	<email>max.mustermann@aol.com</email>
+          	<alter>31.12.1999</alter>
+          	<erfahrung>p</erfahrung>
+          	<schlagzeug>true</schlagzeug>
+      	</person>
+      	<person>
+          	<vorname>Max</vorname>
+          	<nachname>Mustermann</nachname>
+          	<email>max.mustermann@aol.com</email>
+          	<alter>31.12.1999</alter>
+          	<erfahrung>a</erfahrung>
+          	<schlagzeug>false</schlagzeug>
+      	</person>
+    </gruppe>
+</formular>
+

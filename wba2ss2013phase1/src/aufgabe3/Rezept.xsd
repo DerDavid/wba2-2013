@@ -1,0 +1,138 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+			elementFormDefault="qualified" 
+			targetNamespace="http://example.org/Rezept"
+			xmlns:tn="http://example.org/Rezept"> 
+			
+			
+	<xs:element name="recipe">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="tn:ctrecipe">
+					<xs:attribute name="id" type="tn:minInclInt" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+  
+	<xs:complexType name="ctrecipe">
+	  	<xs:sequence>
+	  		<xs:element name="title">
+	  			<xs:simpleType>
+	  				<xs:restriction base="xs:string">
+	  					<xs:minLength value="3"/>
+	  					<xs:maxLength value="75"/>
+	  				</xs:restriction>
+	  			</xs:simpleType>
+	  		</xs:element>
+	  		<xs:element name="picture" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+	  		<xs:element name="ingredient" type="tn:ctingredient" minOccurs="1" maxOccurs="unbounded"/>
+	  		<xs:element name="portions" type="tn:minInclInt" minOccurs="1"/>
+	  		<xs:element name="preparation" type="tn:ctpreparation" minOccurs="1"/>
+	  		<xs:element name="comments" type="tn:ctcomments" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ctingredient">
+	  	<xs:simpleContent>
+	  		<xs:extension base="xs:string">
+	  			<xs:attribute name="name" type="xs:string" use="required"/>
+	  			<xs:attribute name="amount" type="tn:minInclDeci" use="required"/>
+	  			<xs:attribute name="unit" type="tn:unitIngredient" use="optional"/>
+	  		</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	  
+	<xs:complexType name="ctpreparation">
+	  	<xs:sequence>
+	  		<xs:element name="preptime">
+	  			<xs:complexType>
+	  				<xs:simpleContent>
+	  					<xs:extension base="tn:minInclDeci">
+	  						<xs:attribute name="unit" type="tn:unitTime" use="required"/>
+	  					</xs:extension>
+	  				</xs:simpleContent>
+	  			</xs:complexType>
+	  		</xs:element>
+	  		<xs:element name="difficulty" type="tn:difficulty" />
+	  		<xs:element name="calvalue" type="tn:minInclInt" />
+			<xs:element name="text" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	  
+	<xs:complexType name="ctcomments">
+		<xs:sequence>
+	  		<xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+	  			<xs:complexType>
+		  			<xs:complexContent>
+		  				<xs:extension base="tn:ctentry">
+		  					<xs:attribute name="id" type="tn:minInclInt" use="required"/>
+		  				</xs:extension>
+		  			</xs:complexContent>
+	  			</xs:complexType>	
+			</xs:element>	
+		</xs:sequence>
+	</xs:complexType>
+	  
+	<xs:complexType name="ctentry">
+	  	<xs:sequence>		
+			<xs:element name="author" type="xs:string"/>
+		  	<xs:element name="date" type="xs:dateTime"/>
+		  	<xs:element name="text" type="xs:string"/>
+	  	</xs:sequence>
+	</xs:complexType>
+	
+	<!-- simpleTypes -->
+	 
+	<xs:simpleType name="minInclDeci">
+	 	<xs:restriction base="xs:decimal">
+	 		<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="minInclInt">
+	 	<xs:restriction base="xs:integer">
+	 		<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="unitIngredient">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Msp."/>
+			<xs:enumeration value="cm"/>
+			<xs:enumeration value="mg"/>
+			<xs:enumeration value="g"/>
+			<xs:enumeration value="dg"/>
+			<xs:enumeration value="kg"/>
+			<xs:enumeration value="cl"/>
+			<xs:enumeration value="ml"/>
+			<xs:enumeration value="dl"/>
+			<xs:enumeration value="EL"/>
+			<xs:enumeration value="EL, gest."/>
+			<xs:enumeration value="TL"/>
+			<xs:enumeration value="TL, gest."/>
+			<xs:enumeration value="Pkt."/>
+			<xs:enumeration value="n.B."/>
+			<xs:enumeration value="e. Stiele"/>
+			<xs:enumeration value="evt."/>
+			<xs:enumeration value="gr. Dose"/>
+			<xs:enumeration value="gr. Fl."/>
+			<xs:enumeration value="kl. Dose"/>
+			<xs:enumeration value="Port"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="unitTime">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Min"/>
+			<xs:enumeration value="Std"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="difficulty">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="einfach"/>
+	  		<xs:enumeration value="normal"/>
+	  		<xs:enumeration value="schwer"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

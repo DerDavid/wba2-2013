@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tn:recipe id="0" xmlns:tn="http://example.org/Rezept" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.org/Rezept Rezept.xsd ">
+  <tn:title>tn:title</tn:title>
+  <tn:ingredient amount="0.0" name="">tn:ingredient</tn:ingredient>
+  <tn:portions>0</tn:portions>
+  <tn:preparation>
+    <tn:preptime unit="Min">0.0</tn:preptime>
+    <tn:difficulty>einfach</tn:difficulty>
+    <tn:calvalue>0</tn:calvalue>
+    <tn:text>tn:text</tn:text>
+  </tn:preparation>
+  <tn:comments/>
+</tn:recipe>

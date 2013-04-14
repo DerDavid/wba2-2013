@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<recipe xmlns="http://example.org/Rezept" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="24641006006067" xsi:schemaLocation="http://example.org/Rezept Rezept.xsd">
+    <title>Lenchen's Schokoladenkuchen</title>
+    <picture>http://static.chefkoch-cdn.de/ck.de/rezepte/2/2464/8082-960x720-lenchen_s_schokoladenkuchen.jpg</picture>
+    <ingredient unit="g" amount="200" name="Butter"></ingredient>
+    <ingredient unit="g" amount="200" name="Zucker"></ingredient>
+    <ingredient unit="g" amount="200" name="Schokolade, Blockschokolade"></ingredient>
+    <ingredient unit="g" amount="150" name="Mehl"></ingredient>
+    <ingredient unit="TL" amount="0.5" name="Backpulver"></ingredient>
+    <ingredient unit="Pkt." amount="1" name="Vanillezucker"></ingredient>
+    <ingredient amount="4" name="Eier"></ingredient>
+    <portions>16</portions>
+    <preparation>
+        <preptime unit="Std">1</preptime>
+        <difficulty>normal</difficulty>
+        <calvalue>295</calvalue>
+        <text>Butter und Schokolade im Wasserbad schmelzen. Eier trennen. Eiweiß steif schlagen. Eigelbe, Zucker und Vanillezucker verrühren. Geschmolzene Butter-Schokomasse hinzufügen und mischen. Mehl mit dem Backpulver in die Masse sieben und zum Schluss die steifen Eiweiße vorsichtig unterheben. In eine gut gefettete Form geben. Bei 180°Grad 40 - 50 Minuten backen.
+		</text>
+    </preparation>
+    <comments>
+        <entry id="1403">
+            <author>swieselchen</author>
+            <date>2002-02-07T16:49:00.000+02:00</date>
+            <text>Habe Deinen Kuchen gestern gebacken (kleine Abwandlung: statt Blockschokolade hatte ich nur Kuvertüre, zartbitter und ich habe noch etwas Rumaroma und eine Prise Salz dazugegeben) mein LAG war total begeistert. Ich übrigends auch, super Rezept.</text>
+        </entry>
+        <entry id="7243">
+            <author>Mane</author>
+            <date>2003-01-07T15:06:00.000+02:00</date>
+            <text>Habe ihn eben gebacken und bin begeistert.Super Rezept:-)</text>
+        </entry>
+        <entry id="7244">
+            <author>Max Mustermann</author>
+            <date>2013-04-10T16:09:00.000+02:00</date>
+            <text>Hallo</text>
+        </entry>
+        <entry id="7245">
+            <author>Test</author>
+            <date>2013-04-13T13:26:09.095+02:00</date>
+            <text>Test</text>
+        </entry>
+    </comments>
+</recipe>
