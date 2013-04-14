@@ -158,7 +158,6 @@ public class Main {
 		entry.setText(inputComment);
 	 
 		recipe.getComments().getEntry().add(entry);
-		System.out.println(inputComment);
 		
 		//XML Dokument erzeugen und mit dem alten XML Dokument überschreiben
 		marshall();
